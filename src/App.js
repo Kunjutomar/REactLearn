@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
 function App() {
+  const [inputText, setInputText] = useState("");
+
+  const handleClick = () => {
+    alert(
+      // "Button clicked ❤️ by "+
+       inputText);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ textAlign: "center", marginTop: "100px" }}>
+      <h1>Kunju Lover</h1>
+
+      <input
+        type="text"
+        placeholder="Enter your name"
+        value={inputText}
+        onChange={(e) => setInputText(e.target.value)}
+        style={{ padding: "8px", marginBottom: "10px" }}
+      />
+
+      <br />
+
+      <button onClick={handleClick} style={{ padding: "8px 16px" }}>
+        Click Me
+      </button>
     </div>
   );
 }
