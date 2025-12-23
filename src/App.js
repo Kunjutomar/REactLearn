@@ -20,6 +20,7 @@ function App() {
         onChange={(e) => setInputText(e.target.value)}
         style={{ padding: "8px", marginBottom: "10px" }}
       />
+      <br/>
 
       <br />
 
